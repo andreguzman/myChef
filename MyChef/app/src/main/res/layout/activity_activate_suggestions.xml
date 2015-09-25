@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="mychef.mychef.ui.ActivateSuggestionsActivity"
+    android:id="@+id/enterCreditCardLoginInfoContainer">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/creditCardLoginField"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:hint="Credit Card Login Username"
+        android:password="false"
+        android:singleLine="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/creditCardLoginPassword"
+        android:layout_below="@+id/creditCardLoginField"
+        android:layout_centerHorizontal="true"
+        android:hint="Credit Card Login Password"
+        android:password="true"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="If it is okay with you, we would like to use your past eating habits to guide your searches for food made by your new personal chefs!"
+        android:id="@+id/textView"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submitCreditCardInfoButton"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/creditCardLoginPassword" />
+
+</RelativeLayout>

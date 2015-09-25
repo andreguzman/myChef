@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/navigationDrawerContainer"
+    android:background="@android:color/holo_blue_dark"
+    android:clickable="true" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/navigationDrawerTopContainer">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/openMessagesButton"
+            android:background="@drawable/message" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/openNotificationsButton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/notification" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profilePictureImage"
+        android:layout_below="@+id/navigationDrawerTopContainer"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/ic_launcher" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/profileNameText"
+        android:layout_below="@+id/profilePictureImage"
+        android:layout_centerHorizontal="true"
+        android:elegantTextHeight="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/action_settings"
+        android:id="@+id/navigationDrawerSettingsText"
+        android:layout_below="@+id/profileNameText"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/navigationDrawerSettingsText"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/navigationDrawerChefOrEaterSelectionContainer">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chef_or_eater_eater_text"
+            android:id="@+id/navigationDrawerEaterSelectionText"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chef_or_eater_chef_text"
+            android:id="@+id/navigationDrawerChefSelectionText"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/navigationDrawerMenuList"
+        android:layout_below="@+id/navigationDrawerChefOrEaterSelectionContainer"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

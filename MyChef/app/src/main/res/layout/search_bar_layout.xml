@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/foodListContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp" >
+
+    <EditText
+        android:id="@+id/searchBarSearchBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/searchBarSwitchButton"
+        android:layout_toRightOf="@+id/searchBarOpenNavigationDrawer"
+        android:layout_toStartOf="@+id/searchBarSwitchButton"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textColor="@android:color/white" />
+
+    <ImageButton
+        android:id="@+id/searchBarOpenNavigationDrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/searchBarSearchBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha" />
+
+    <ImageButton
+        android:id="@+id/searchBarSwitchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/searchBarSearchBar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_media_route_off_mono_dark" />
+</RelativeLayout>

@@ -1,0 +1,418 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mychef.mychef.ui.FoodInformationActivity"
+    android:id="@+id/foodInformationLayout">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/foodLogoContainer"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logoImage"
+            android:background="@drawable/logo"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/logoImage"
+            android:background="@drawable/back_icon" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Food"
+        android:id="@+id/paymentButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/foodInformationScroll"
+        android:layout_below="@+id/foodLogoContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/paymentButton" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/foodInformationContainer">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/foodInfoWindowImage"
+                android:background="@drawable/ic_launcher"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/food_name_default_text"
+                android:id="@+id/foodNameText"
+                android:layout_below="@+id/foodInfoWindowImage"
+                android:layout_centerHorizontal="true" />
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/foodRatingBar"
+                android:layout_centerHorizontal="true"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_below="@+id/foodNameText" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:baselineAligned="false"
+                android:layout_below="@+id/foodRatingBar"
+                android:id="@+id/chefNameMapContainer"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/chef_name_default_text"
+                    android:id="@+id/chefNameText"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/mapTextImageContainer"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mapIconImage"
+                        android:background="@drawable/ic_setting_light" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/map_link_text"
+                        android:id="@+id/mapText"
+                        android:gravity="center" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chefNameMapContainer"
+                android:id="@+id/pickUpInformationContainer"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/pickUpDateContainer">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pick Up Date"
+                        android:id="@+id/pickUpDateText"
+                        android:gravity="left"
+                        android:paddingLeft="5dp" />
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pickUpDateSpinner"
+                        android:layout_below="@+id/pickUpDateText"
+                        android:layout_alignLeft="@+id/pickUpDateText" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/pickUpTimeContainer">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Time"
+                        android:id="@+id/pickUpTimeText"
+                        android:paddingLeft="5dp" />
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pickUpTimeSpinner"
+                        android:layout_below="@+id/pickUpTimeText"
+                        android:layout_alignLeft="@+id/pickUpTimeText"
+                        android:spinnerMode="dialog" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/pickUpQuantityContainer">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Quantity"
+                        android:id="@+id/pickUpQuantityText"
+                        android:paddingLeft="5dp" />
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pickUpQuantitySpinner"
+                        android:layout_below="@+id/pickUpQuantityText"
+                        android:layout_alignLeft="@+id/pickUpQuantityText" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modify Food"
+                android:id="@+id/modifyFoodButton"
+                android:layout_below="@+id/pickUpInformationContainer"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/priceContainer"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/modifyFoodButton"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:id="@+id/totalPriceLabelText"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/totalPriceText"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/foodDescriptionContainer"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="20dp"
+                android:layout_below="@+id/uberPriceContainer">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/food_description_label_text"
+                    android:id="@+id/foodDescriptionLabelText"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/foodDescriptionLeftBoundaryImage"
+                    android:layout_toLeftOf="@+id/foodDescriptionLabelText"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/foodDescriptionLabelText"
+                    android:layout_alignBottom="@+id/foodDescriptionLabelText"
+                    android:background="@drawable/abc_textfield_activated_mtrl_alpha" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/foodDescriptionText"
+                    android:layout_below="@+id/foodDescriptionLabelText"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="5dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/foodDescriptionRightBoundaryImage"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignTop="@+id/foodDescriptionLabelText"
+                    android:layout_alignBottom="@+id/foodDescriptionLabelText"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/foodDescriptionLabelText"
+                    android:background="@drawable/abc_textfield_activated_mtrl_alpha" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/uberPriceContainer"
+                android:layout_below="@+id/priceContainer">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estimated Uber Cost"
+                    android:id="@+id/uberPriceLabelText"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/uberPriceText"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/foodAllergensContainer"
+                android:layout_below="@+id/foodDescriptionContainer"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allergen_label_text"
+                    android:id="@+id/allergenLabelText"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/allergenLeftBoundaryImage"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/allergenLabelText"
+                    android:layout_alignBottom="@+id/allergenLabelText"
+                    android:background="@drawable/abc_textfield_activated_mtrl_alpha"
+                    android:layout_toLeftOf="@+id/allergenLabelText" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/allergenRightBoundaryImage"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignTop="@+id/allergenLabelText"
+                    android:layout_alignBottom="@+id/allergenLabelText"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/allergenLabelText"
+                    android:background="@drawable/abc_textfield_activated_mtrl_alpha" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allergen_information_text"
+                    android:id="@+id/allergenInformationText"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/allergenLabelText"
+                    android:paddingTop="5dp" />
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/allergenList"
+                    android:layout_below="@+id/allergenInformationText"
+                    android:paddingTop="5dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/aboutChefContainer"
+                android:layout_below="@+id/foodAllergensContainer"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_chef_label_text"
+                    android:id="@+id/aboutChefLabelText"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/aboutChefLeftBoundaryImage"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/aboutChefLabelText"
+                    android:layout_alignBottom="@+id/aboutChefLabelText"
+                    android:background="@drawable/abc_textfield_activated_mtrl_alpha"
+                    android:layout_toLeftOf="@+id/aboutChefLabelText" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/aboutChefRightBoundaryImage"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignTop="@+id/aboutChefLabelText"
+                    android:layout_alignBottom="@+id/aboutChefLabelText"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/aboutChefLabelText"
+                    android:background="@drawable/abc_textfield_activated_mtrl_alpha" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chef_name_default_text"
+                    android:id="@+id/chefNameBottomText"
+                    android:layout_alignParentLeft="false"
+                    android:layout_below="@+id/chefPictureImage"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="5dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/chefPictureImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/aboutChefLabelText"
+                    android:paddingTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/aboutChefText"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/chefNameBottomText"
+                    android:paddingTop="5dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

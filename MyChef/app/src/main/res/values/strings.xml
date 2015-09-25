@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">MyChef</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="wouldLike">I would like</string>
+    <string name="would_like">I would like</string>
+    <string name="address_help_text">Enter location</string>
+    <string name="search_bar_help_text">Food or chef search</string>
+    <string name="i_am_at">I am at</string>
+    <string name="search_button_text">Search</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_food_map">Map</string>
+    <string name="title_activity_home">My Chef</string>
+    <string name="title_activity_food_map_container">Food Map</string>
+    <string name="title_activity_chef_or_eater">Chef Or Eater</string>
+    <string name="chef_or_eater_center_text">OR</string>
+    <string name="chef_or_eater_eater_text">Eater</string>
+    <string name="chef_or_eater_chef_text">Chef</string>
+    <string name="chef_or_eater_eater_label">I eat food</string>
+    <string name="chef_or_eater_chef_label">I make food</string>
+    <string name="title_activity_sign_up">Sign Up</string>
+    <string name="reenter_password_hint">Re-enter Password</string>
+    <string name="email_field_help">Email</string>
+    <string name="password_field_hint">Password</string>
+    <string name="username_field_hint">Username</string>
+    <string name="name_field_hint">Name</string>
+    <string name="sign_up_button_text">Sign Up</string>
+    <string name="motto_text">MyChef, your personal chef</string>
+    <string name="title_activity_sign_in">Sign In</string>
+    <string name="sign_in_field_help">Sign In</string>
+    <string name="title_activity_main">Food Main</string>
+    <string name="title_activity_messages">MessagesActivity</string>
+    <string name="messages_title_text">Messages</string>
+    <string name="title_activity_notifications">Notifications</string>
+    <string name="notification_title_text">Notifications</string>
+    <string name="title_activity_food_information">Food Information</string>
+    <string name="food_name_default_text">Food Name Here</string>
+    <string name="chef_name_default_text">Chef Name</string>
+    <string name="map_link_text">map</string>
+    <string name="food_description_label_text">Food Description</string>
+    <string name="allergen_label_text">Allergens</string>
+    <string name="allergen_information_text">This dish contains the following allergens:</string>
+    <string name="about_chef_label_text">About Chef</string>
+    <string name="title_activity_my_pickups">My Pickups</string>
+    <string name="title_activity_my_listings">My Listings Activity</string>
+    <string name="title_activity_create_listing">Create Listing</string>
+    <string name="food_name_field_help_text">Enter a name for your food here</string>
+    <string name="title_activity_navigation_test">NavigationTestActivity</string>
+    <string name="my_current_listings_label_text">My Current Listings</string>
+    <string name="my_past_listings_label_text">My Past Listings</string>
+    <string name="my_current_pickups_label_text">My Current Pickups</string>
+    <string name="my_past_pickups_label_text">My Past Pickups</string>
+    <string name="my_pickups_label_text">My Pickups</string>
+    <string name="my_listings_label_text">My Listings</string>
+    <string name="find_food_label_text">Find Food</string>
+    <string name="facebook_app_id">129281257412312</string>
+    <string name="identity_pool_id">us-east-1:03c2e358-3ab5-4230-9929-4ce62c619e56</string>
+    <string name="uber_server_token">ak1RevgxHKMEtgfbSFDJpOCVddAtvOZh7B9IWK37</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="current_pickups_listing_default_text">Default Text</string>
+    <string name="food_price_default_text">$0.00</string>
+    <string name="food_distance_default_text">0.0 mi</string>
+    <string name="create_listing_text">Create Listing</string>
+    <string name="title_activity_payment">Payment</string>
+    <string name="title_activity_activate_suggestions">ActivateSuggestions</string>
+</resources>

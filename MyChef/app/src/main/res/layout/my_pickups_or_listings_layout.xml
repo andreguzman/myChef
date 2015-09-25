@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/pickupsOrListingsContainer">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/logoBackButtonContainer">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logoImage"
+            android:background="@drawable/logo"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backButton"
+            android:background="@drawable/back_icon"
+            android:layout_alignBottom="@+id/logoImage"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/current_pickups_listing_default_text"
+        android:id="@+id/myCurrentPickupsListingsLabelText"
+        android:layout_below="@+id/logoBackButtonContainer"
+        android:layout_alignParentLeft="true" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/myCurrentPickupsListingsList"
+        android:layout_below="@+id/myCurrentPickupsListingsLabelText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:footerDividersEnabled="false"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/myPastPickupsListingsLabelText"
+        android:layout_below="@+id/myCurrentPickupsListingsList"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/current_pickups_listing_default_text" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/myPastPickupsListingsList"
+        android:layout_below="@+id/myPastPickupsListingsLabelText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

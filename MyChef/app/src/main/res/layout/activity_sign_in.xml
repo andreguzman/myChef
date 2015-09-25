@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mychef.mychef.ui.SignInActivity"
+    android:background="@drawable/background_image">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/passwordField"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:enabled="true"
+        android:hint="@string/password_field_hint"
+        android:singleLine="true"
+        android:paddingLeft="140dp"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/usernameField"
+        android:layout_above="@+id/passwordField"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/username_field_hint"
+        android:singleLine="true"
+        android:paddingLeft="140dp"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signInButton"
+        android:layout_below="@+id/passwordField"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/sign_in_field_help"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logoImage"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/motto_text"
+        android:id="@+id/mottoText"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/motto_text_size"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/login_button"
+        android:paddingTop="10dp" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signInButton"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

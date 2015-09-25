@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:id="@+id/foodListItemContainer">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodInfoWindowImage"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_launcher" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodInfoBarBackgroundImage"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignLeft="@+id/foodInfoWindowImage"
+        android:layout_alignRight="@+id/foodInfoWindowImage"
+        android:layout_alignBottom="@+id/foodInfoWindowImage"
+        android:layout_alignTop="@+id/foodNameText"
+        android:background="@color/food_list_item_text_background_color" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/food_name_default_text"
+        android:id="@+id/foodNameText"
+        android:layout_alignBottom="@+id/foodInfoWindowImage"
+        android:layout_alignLeft="@+id/foodInfoWindowImage"
+        android:layout_marginLeft="@dimen/food_list_bottom_text_margin"
+        android:textSize="@dimen/food_name_text_size"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/food_distance_default_text"
+        android:id="@+id/foodDistanceText"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignBottom="@+id/foodInfoWindowImage"
+        android:layout_alignRight="@+id/foodInfoWindowImage"
+        android:textSize="@dimen/food_name_text_size"
+        android:layout_marginRight="@dimen/food_list_bottom_text_margin"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/food_price_default_text"
+        android:id="@+id/foodPriceText"
+        android:textSize="25sp"
+        android:background="@color/food_list_item_text_background_color"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false"
+        android:paddingRight="@dimen/food_list_bottom_text_margin"
+        android:paddingLeft="2dp"
+        android:enabled="false"
+        android:textColor="@android:color/white"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>
